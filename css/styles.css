@@ -1,0 +1,51 @@
+/* DEVELOPER: Jeff Janvier, IS117-007, Fall 2025 */
+
+/* Base */
+html { font-size: 16px; }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color:#222; background:#fff; line-height:1.5; margin:0; padding:0; }
+
+/* Navbar logo image sizing */
+.logo-img { width:48px; height:48px; object-fit:cover; border-radius:6px; }
+
+/* Hero styling (homepage different style) */
+.hero { background: linear-gradient(180deg,#fff9f0,#fff); border:1px solid #f1e7df; }
+
+/* Float-wrapped images used on content pages */
+.float-img {
+  float: left;
+  width: 220px;
+  max-width: 40%;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+
+/* Make sure images are responsive */
+img.img-fluid, .card-img-top, .float-img { height:auto; display:block; max-width:100%; }
+
+/* Footer */
+.site-footer { border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* Container width */
+.container { max-width:1100px; }
+
+/* Ensure no overflow */
+* { box-sizing: border-box; }
+
+/* Small text size no smaller than .75em */
+small, .small { font-size:0.9rem; }
+
+/* Media query: adapt to small mobile (one size change) */
+@media (max-width: 480px) {
+  html { font-size:14px; }
+  .float-img { float:none; display:block; margin:0 0 1rem 0; width:100%; max-width:100%; }
+  .row.row-cols-md-3 { --bs-columns:1; }
+  .container { padding-left:.75rem; padding-right:.75rem; }
+  .navbar-brand { font-size:1.05rem; }
+}
+
+/* Accessibility: contrast helpers */
+a:focus, button:focus { outline: 3px solid #ffcc66; outline-offset: 2px; }
+
+/* Spacing and readability */
+h1,h2,h3 { color:#1f2937; }
+p, li { font-size:1rem; }
